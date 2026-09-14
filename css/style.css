@@ -1,0 +1,929 @@
+@charset "UTF-8";
+
+/* ==========================================
+   基本設定
+   ========================================== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #fffdf9;
+	color: #333;
+	font-family: "Zen Maru Gothic", sans-serif;
+	word-break: auto-phrase;
+	overflow-wrap: break-word;
+}
+
+/* ==========================================
+   ヘッダー
+   ========================================== */
+header {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 50px 30px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title-area {
+	position: relative;
+	display: inline-block;
+}
+
+h1 {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	font-size: clamp(32px, 5vw, 56px);
+	line-height: 1.2;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+/* タイトルロゴデザイン */
+.logo {
+	font-family: "Zen Maru Gothic", sans-serif;
+	font-size: clamp(38px, 5vw, 60px);
+	font-weight: 900;
+	line-height: 1.15;
+	margin: 0;
+}
+
+.logo .line1,
+.logo .line2 {
+	display: block;
+	white-space: nowrap;
+}
+
+.logo .line2 {
+	margin-left: 70px;
+}
+
+/* 一文字ずつ動かす */
+.logo span span {
+	display: inline-block;
+}
+
+/* 1行目 */
+.line1 span:nth-child(1) {
+	transform: rotate(-3deg) translateY(2px);
+}
+
+.line1 span:nth-child(2) {
+	transform: rotate(2deg) translateY(-3px);
+}
+
+.line1 span:nth-child(3) {
+	transform: rotate(-2deg) translateY(3px);
+}
+
+.line1 span:nth-child(4) {
+	transform: rotate(3deg) translateY(-2px);
+}
+
+.line1 span:nth-child(5) {
+	transform: rotate(-4deg) translateY(2px);
+}
+
+.line1 span:nth-child(6) {
+	transform: rotate(3deg) translateY(-4px);
+}
+
+.line1 span:nth-child(7) {
+	transform: rotate(-2deg) translateY(2px);
+}
+
+/* 2行目 */
+.line2 span:nth-child(1) {
+	transform: rotate(3deg) translateY(-3px);
+}
+
+.line2 span:nth-child(2) {
+	transform: rotate(-2deg) translateY(2px);
+}
+
+.line2 span:nth-child(3) {
+	transform: rotate(4deg) translateY(-2px);
+}
+
+.line2 span:nth-child(4) {
+	transform: rotate(-4deg) translateY(3px);
+}
+
+.line2 span:nth-child(5) {
+	transform: rotate(2deg) translateY(-3px);
+}
+
+.line2 span:nth-child(6) {
+	transform: rotate(-3deg) translateY(2px);
+}
+
+.line2 span:nth-child(7) {
+	transform: rotate(5deg) translateY(-2px);
+}
+
+/* 靴下と穴だけ色を変える */
+.sock-word {
+	color: #f28b30;
+}
+
+.hole-word {
+	color: #e85d75;
+}
+
+/* タイトル横の靴下 */
+.title-sock {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	left: -300px;
+	top: -55px;
+	z-index: 0;
+}
+
+/* ==========================================
+   メイン
+   ========================================== */
+main {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px 30px 0;
+	text-align: center;
+}
+
+.lead {
+	margin: 15px 0 35px;
+	font-size: 18px;
+	line-height: 1.8;
+}
+
+.instruction {
+	margin-top: 50px;
+	margin-bottom: -10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* ==========================================
+   足のイラストと穴
+   ========================================== */
+.foot-area {
+	position: relative;
+	width: min(700px, 100%);
+	margin: 0 auto;
+}
+
+.main-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.side-labels {
+	display: flex;
+	justify-content: space-around;
+	font-family: "Zen Maru Gothic", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	margin-top: -25px;
+}
+
+.side-labels span:last-child {
+	transform: translateX(-40px);
+}
+
+.hole {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+.hole01 {
+	top: 14%;
+	left: 40%;
+	width: 6%;
+	height: 5%;
+}
+
+.hole02 {
+	top: 16%;
+	left: 35%;
+	width: 4%;
+	height: 4%;
+}
+
+.hole03 {
+	top: 17%;
+	left: 30%;
+	width: 4%;
+	height: 4%;
+}
+
+.hole04 {
+	top: 20%;
+	left: 26%;
+	width: 4%;
+	height: 4%;
+}
+
+.hole05 {
+	top: 24%;
+	left: 22%;
+	width: 4%;
+	height: 4%;
+}
+
+.hole06 {
+	top: 30%;
+	left: 22%;
+	width: 4%;
+	height: 8%;
+}
+
+.hole07 {
+	top: 21%;
+	left: 42%;
+	width: 4%;
+	height: 8%;
+}
+
+.hole08 {
+	top: 47%;
+	left: 30%;
+	width: 10%;
+	height: 10%;
+}
+
+.hole09a {
+	top: 66%;
+	left: 36%;
+	width: 6%;
+	height: 12%;
+}
+
+.hole09b {
+	top: 81%;
+	left: 65%;
+	width: 9%;
+	height: 4%;
+}
+
+.hole10 {
+	top: 7%;
+	left: 61%;
+	width: 6%;
+	height: 10%;
+}
+
+.hole11 {
+	top: 8%;
+	left: 68%;
+	width: 4%;
+	height: 8%;
+}
+
+.hole12 {
+	top: 10%;
+	left: 72%;
+	width: 4%;
+	height: 7%;
+}
+
+.hole13 {
+	top: 15%;
+	left: 75%;
+	width: 4%;
+	height: 5%;
+}
+
+.hole14 {
+	top: 19%;
+	left: 78%;
+	width: 4%;
+	height: 6%;
+}
+
+.hole15 {
+	top: 22%;
+	left: 61%;
+	width: 9%;
+	height: 11%;
+}
+
+.hole16 {
+	top: 27%;
+	left: 72%;
+	width: 7%;
+	height: 8%;
+}
+
+.hole17 {
+	top: 40%;
+	left: 63%;
+	width: 14%;
+	height: 10%;
+}
+
+.hole18 {
+	top: 70%;
+	left: 65%;
+	width: 9%;
+	height: 10%;
+}
+
+/* ==========================================
+   about.html 用コンテナ
+   ========================================== */
+.about-container {
+	width: 90%;
+	max-width: 700px;
+	margin: 60px auto;
+	padding: 0 10px;
+	line-height: 1.8;
+	text-align: left;
+}
+
+.about-container h1 {
+	margin: 0 0 40px;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.04em;
+	text-align: left;
+}
+
+.about-container h2 {
+	margin: 40px 0 15px;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.about-container p {
+	margin: 0 0 20px;
+	font-size: 16px;
+	line-height: 1.9;
+}
+
+.about-container a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.about-container a:hover {
+	text-decoration: underline;
+}
+
+/* ==========================================
+   キャラクター図鑑スタイル
+   ========================================== */
+.character-zukan {
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #faf8f5;
+	border-radius: 12px;
+	max-width: 900px;
+}
+
+.zukan-title {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #333;
+	margin-bottom: 16px;
+	font-weight: 700;
+}
+
+.zukan-grid {
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	gap: 8px;
+}
+
+.zukan-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #e0dad0;
+	border-radius: 8px;
+	padding: 6px 4px;
+}
+
+.zukan-item img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+/* ==========================================
+   LINEスタンプバナー
+   ========================================== */
+.line-stamp-banner {
+	margin: 45px auto 10px;
+	max-width: 320px;
+	text-align: center;
+}
+
+.line-stamp-banner a {
+	display: block;
+	background: #06c755;
+	color: #fff;
+	padding: 10px 16px;
+	border-radius: 50px;
+	text-decoration: none;
+	font-weight: 700;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+}
+
+.line-stamp-banner a:hover {
+	transform: translateY(-2px);
+}
+
+.line-stamp-banner span {
+	font-size: 1rem;
+	display: block;
+}
+
+.line-stamp-banner p {
+	font-size: 0.8rem;
+	margin: 2px 0 0;
+	opacity: 0.9;
+}
+
+.stamp-bot-note {
+	text-align: center;
+	font-size: 0.85rem;
+	color: #777;
+	margin: 6px 0 80px;
+}
+
+/* ==========================================
+   掲示板（黒板風）
+   ========================================== */
+.info-board {
+	max-width: 700px;
+	margin: 40px auto;
+	padding: 25px;
+	background: #2b453b;
+	border: 6px solid #8c5d3a;
+	border-radius: 6px;
+	text-align: left;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	color: #ffffff;
+}
+
+.info-board h2 {
+	font-size: 1.1rem;
+	margin: 0 0 15px;
+	color: #fff6d6;
+	text-align: center;
+	letter-spacing: 0.05em;
+	border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+	padding-bottom: 10px;
+}
+
+.info-board ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.info-board li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 0;
+	border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+	color: #ffffff;
+}
+
+.info-board li:last-child {
+	border-bottom: none;
+}
+
+.info-board a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
+.info-board a:hover {
+	text-decoration: underline;
+	color: #ffeb3b;
+}
+
+.info-tag {
+	font-size: 0.75rem;
+	padding: 3px 10px;
+	border-radius: 4px;
+	font-weight: 700;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.info-tag.stamp {
+	background: #4cd137;
+	color: #fff;
+}
+
+.info-tag.vote {
+	background: #ff5252;
+	color: #fff;
+}
+
+.info-tag.name {
+	background: #ffa801;
+	color: #fff;
+}
+
+/* ==========================================
+   今週のピックアップ（額縁風エリア）
+   ========================================== */
+.weekly-pickup-section {
+	margin: 50px auto 30px;
+	padding: 0 15px;
+	max-width: 500px;
+}
+
+/* 金の重厚な額縁風フレーム */
+.picture-frame {
+	background-color: #fffdf9;
+	/* 全体の背景色と統一 */
+	border: 8px double #d4a359;
+	/* 上品で重厚感のある二重金枠 */
+	border-radius: 12px;
+	padding: 24px 20px;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+	text-align: center;
+}
+
+/* タイトル「今週のピックアップ」 */
+.pickup-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #f28b30;
+	/* タイトルロゴのオレンジ色と統一 */
+	margin: 0 0 10px 0;
+	letter-spacing: 0.05em;
+}
+
+/* キャラクター名（大きめ） */
+.pickup-char-name {
+	font-size: 1.5rem;
+	font-weight: 900;
+	color: #333;
+	margin: 0 0 16px 0;
+	line-height: 1.3;
+}
+
+/* キャラ画像を取り囲む白枠 */
+.pickup-img-wrap {
+	width: 160px;
+	height: 160px;
+	margin: 0 auto 16px;
+	background-color: #ffffff;
+	border: 1px solid #e0dad0;
+	/* 図鑑カードの枠線と統一 */
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+}
+
+.pickup-img-wrap img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+/* 〇〇賞 ＆ 一言コメントのカード */
+.pickup-caption {
+	background-color: #faf8f5;
+	/* 図鑑エリアの背景色と統一 */
+	border-radius: 8px;
+	padding: 14px 12px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* コメントテキスト */
+.creator-comment {
+	font-size: 0.95rem;
+	color: #333;
+	margin: 8px 0 0;
+	line-height: 1.6;
+}
+
+/* （製作者コメント）の注記 */
+.comment-author {
+	display: block;
+	font-size: 0.8rem;
+	color: #777;
+	margin-top: 4px;
+}
+
+/* ==========================================
+   注意書き（note）
+   ========================================== */
+.note {
+	font-size: 0.85rem;
+	color: #777;
+	line-height: 1.6;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+/* ==========================================
+   上へ戻るボタン
+   ========================================== */
+.to-top-wrap {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	z-index: 99;
+}
+
+.to-top-wrap.is-show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.to-top-btn {
+	background: transparent;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	display: block;
+	width: 65px;
+	height: 65px;
+}
+
+.to-top-btn img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	filter: drop-shadow(0 3px 6px rgba(107, 99, 91, 0.25));
+	transition: transform 0.2s ease;
+}
+
+.to-top-wrap:hover img {
+	transform: translateY(-4px);
+}
+
+/* ==========================================
+   下層ページ用ヘッダー
+   ========================================== */
+.sub-header {
+	padding: 20px 0;
+	text-align: center;
+	background: transparent;
+}
+
+.sub-logo {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #6b635b;
+	text-decoration: none;
+}
+
+.sub-logo:hover {
+	opacity: 0.7;
+}
+
+/* ==========================================
+   お問い合わせページ専用
+   ========================================== */
+body.inquiry-page {
+	background: #fffef0;
+}
+
+body.inquiry-page .inquiry-container {
+	max-width: 600px;
+	margin: 40px auto 60px;
+	padding: 35px;
+	background: #ffffff;
+	border: 4px solid #4fc3f7;
+	border-radius: 20px;
+	box-shadow: 0 8px 0 #0288d1;
+	text-align: left;
+}
+
+body.inquiry-page .inquiry-container h1 {
+	font-size: 1.8rem;
+	color: #e85d75;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: 900;
+}
+
+body.inquiry-page .inquiry-container p {
+	font-size: 0.95rem;
+	color: #666;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+body.inquiry-page .form-group {
+	margin-bottom: 22px;
+}
+
+body.inquiry-page .form-group label {
+	display: block;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: #f28b30;
+	margin-bottom: 8px;
+}
+
+body.inquiry-page .form-group input,
+body.inquiry-page .form-group textarea {
+	width: 100%;
+	padding: 12px;
+	border: 3px solid #ffe0b2;
+	border-radius: 12px;
+	background: #fffdf9;
+	font-size: 1rem;
+	color: #333;
+	box-sizing: border-box;
+}
+
+body.inquiry-page .form-group input:focus,
+body.inquiry-page .form-group textarea:focus {
+	outline: none;
+	border-color: #4fc3f7;
+	background: #fff;
+}
+
+body.inquiry-page .submit-btn {
+	display: block;
+	width: auto;
+	/* 横幅いっぱいをやめて文字幅＋余白にする */
+	min-width: 160px;
+	/* 小さくなりすぎないように最低限の幅を確保 */
+	max-width: 200px;
+	/* 全体の最大幅をギュッと小さくする */
+	margin: 0 auto;
+	padding: 10px 20px;
+	/* 上下左右の余白をコンパクトにする */
+	background: #e85d75;
+	color: #fff;
+	border: none;
+	border-radius: 50px;
+	font-size: 1rem;
+	/* フォントサイズも少しスッキリさせる */
+	font-weight: 900;
+	cursor: pointer;
+	box-shadow: 0 4px 0 #ad1457;
+	/* ボタンの立体感の影も少し小さくしてバランス調整 */
+	transition: transform 0.1s, box-shadow 0.1s;
+}
+
+body.inquiry-page .submit-btn:hover {
+	background: #f06292;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 0 #ad1457;
+}
+
+body.inquiry-page .submit-btn:active {
+	transform: translateY(2px);
+	box-shadow: 0 1px 0 #ad1457;
+}
+
+/* ==========================================
+   フッター
+   ========================================== */
+footer {
+	text-align: center;
+	padding: 10px 20px 30px;
+	font-size: 0.9rem;
+	color: #666;
+}
+
+footer .footer-links {
+	margin-bottom: 10px;
+}
+
+footer .footer-links a {
+	color: #666;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+footer a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ==========================================
+   スマホ対応（メディアクエリ）
+   ========================================== */
+@media screen and (max-width: 768px) {
+	.zukan-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		padding: 30px 15px 15px;
+		overflow: hidden;
+	}
+
+	.title-area {
+		position: relative;
+		display: inline-block;
+		padding-left: 50px;
+	}
+
+	.title-sock {
+		position: absolute;
+		width: 70px;
+		height: auto;
+		left: -10px;
+		top: 0;
+		z-index: 2;
+	}
+
+	h1 {
+		font-size: 28px;
+	}
+
+	.logo {
+		font-size: clamp(26px, 7.5vw, 34px);
+	}
+
+	main {
+		padding: 15px 15px 0;
+	}
+
+	.lead {
+		font-size: 15px;
+		line-height: 1.6;
+		padding: 0 10px;
+	}
+
+	.instruction {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.zukan-grid {
+		grid-template-columns: repeat(6, 1fr);
+		gap: 6px;
+	}
+
+	.character-zukan {
+		padding: 12px 8px;
+	}
+}
+
+/* 広告 */
+.ad-wrap {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 120px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+.ad-item {
+	width: 100%;
+	max-width: 300px;
+}
+
+/* 本物の広告っぽい見た目にする装飾 */
+.ad-label {
+	display: block;
+	font-size: 0.7rem;
+	color: #aaa;
+	margin-bottom: 4px;
+	text-align: left;
+}
+
+.ad-box {
+	width: 100%;
+	height: 250px;
+	/* 実際の標準的な広告の高さ */
+	background: #f4f4f4;
+	border: 1px dashed #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #999;
+	font-size: 0.85rem;
+	border-radius: 4px;
+}
