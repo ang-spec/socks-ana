@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+/* ==========================================
+   基本設定
+   ========================================== */
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #fff5f6;
+	color: #333;
+	font-family: "Zen Maru Gothic", sans-serif;
+	word-break: auto-phrase;
+	overflow-wrap: break-word;
+}
+
+/* ==========================================
+   ヘッダー
+   ========================================== */
+header {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 45px 30px 20px;
+	text-align: center;
+}
+
+.result-logo {
+	margin: 0;
+	font-size: 42px;
+	font-weight: 900;
+}
+
+/* ==========================================
+   結果ページ全体構造
+   ========================================== */
+.result-page {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 20px 30px 30px;
+	text-align: center;
+}
+
+.result-label {
+	margin: 0 0 15px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.result-page>h2 {
+	display: inline-block;
+	margin: 40px 0 35px;
+	padding: 12px 20px;
+	font-size: 30px;
+	font-weight: 900;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	max-width: 100%;
+}
+
+.subtitle {
+	display: block;
+	font-size: 0.75em;
+	color: #e65100;
+	margin-top: 8px;
+}
+
+/* ==========================================
+   キャラクター名前募集ボックス（ヘッダー下リンク）
+   ========================================== */
+a.character-name-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	margin: 4px 0 -25px 0;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	position: relative;
+	z-index: 10;
+}
+
+a.character-name-box:hover {
+	opacity: 0.8;
+}
+
+.circle-question {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	border: 0.5px solid #666;
+	border-radius: 50%;
+	font-size: 0.85rem;
+	font-weight: bold;
+	color: #333;
+	background: #fff;
+}
+
+.name-recruit-text {
+	font-size: 0.75rem;
+	color: #666;
+	margin-left: 4px;
+}
+
+/* ==========================================
+   結果イラスト
+   ========================================== */
+.result-image {
+	width: 85%;
+	max-width: 320px;
+	margin: 0 auto 30px;
+}
+
+.result-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* ==========================================
+   要約ボックス
+   ========================================== */
+.result-summary {
+	background: #ffffff;
+	border: 2px dashed #f48fb1;
+	border-radius: 12px;
+	padding: 15px;
+	margin: 0 auto 30px;
+	max-width: 500px;
+}
+
+.result-summary .summary-text {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.result-summary strong {
+	display: inline-block;
+	margin-bottom: 12px;
+	line-height: 1.6;
+	font-weight: 900;
+}
+
+/* ==========================================
+   シェアボタン
+   ========================================== */
+.share-area {
+	margin: 20px 0 35px;
+	text-align: center;
+}
+
+.share-button {
+	display: inline-block;
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 15px;
+	padding: 14px 28px;
+	border-radius: 30px;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	transition: transform 0.2s, opacity 0.2s;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.share-button:hover,
+.share-button:active {
+	opacity: 0.85;
+	transform: translateY(-2px);
+}
+
+/* ==========================================
+   診断本文
+   ========================================== */
+.result-text {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	font-size: 17px;
+	line-height: 2;
+	text-align: center;
+}
+
+.result-text p {
+	margin: 0 0 25px;
+}
+
+.result-text strong {
+	font-weight: 900;
+}
+
+/* ==========================================
+   特殊能力（生態セクション）
+   ========================================== */
+.scene {
+	margin: 35px auto;
+	padding: 20px 25px;
+	width: 90%;
+	max-width: 440px;
+	background: #fff9e6;
+	border-radius: 14px;
+	text-align: center;
+}
+
+.scene h3 {
+	margin: 0 0 16px;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.scene ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: left;
+	max-width: 100%;
+}
+
+.scene li {
+	font-size: 15px;
+	margin: 10px 0;
+	line-height: 1.5;
+	position: relative;
+	padding-left: 2em;
+}
+
+.scene li::before {
+	content: "●";
+	position: absolute;
+	left: 0;
+	color: #6bbd99;
+	font-size: 0.8em;
+	top: 1px;
+}
+
+/* ==========================================
+   エンディングボックス
+   ========================================== */
+.ending-box {
+	width: 90%;
+	max-width: 400px;
+	margin: 35px auto;
+	padding: 25px 20px;
+	background-color: #ffffff;
+	border: 2px solid #e0e0e0;
+	border-radius: 16px;
+	text-align: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ending {
+	font-size: 15px;
+	color: #666666;
+	line-height: 1.8;
+	margin: 0 0 12px 0;
+}
+
+.ending-big {
+	font-size: 22px;
+	color: #e74c3c;
+	margin: 0;
+	line-height: 1.8;
+}
+
+.ending-big strong {
+	font-weight: 900;
+}
+
+/* ==========================================
+   ページ下部アクションエリア（いいね・名前募集・スタンプ）
+   ========================================== */
+.page-actions {
+	margin-top: 50px;
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center;
+}
+
+.like-area {
+	text-align: center;
+}
+
+#like-btn {
+	background: #fff;
+	border: 2px solid #e85d75;
+	color: #e85d75;
+	padding: 10px 24px;
+	border-radius: 50px;
+	font-size: 1rem;
+	font-weight: 700;
+	cursor: pointer;
+	font-family: inherit;
+	transition: background 0.2s, color 0.2s, transform 0.1s;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#like-btn:hover {
+	background: #e85d75;
+	color: #fff;
+	transform: translateY(-2px);
+}
+
+.name-submission {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	text-align: left;
+	background: #faf8f5;
+	border: 1px solid #e0dad0;
+	border-radius: 12px;
+	padding: 20px;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.name-cara-icon {
+	width: 90px;
+	height: 90px;
+	object-fit: contain;
+	background: #fff;
+	border-radius: 8px;
+	border: 2px solid #e0dad0;
+	padding: 6px;
+	flex-shrink: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.name-form-content {
+	flex: 1;
+}
+
+.name-submission h3 {
+	font-size: 1rem;
+	margin: 0 0 4px;
+	color: #333;
+}
+
+.name-submission p {
+	font-size: 0.85rem;
+	color: #777;
+	margin: 0 0 12px;
+}
+
+.name-submission form {
+	display: flex;
+	gap: 8px;
+}
+
+.name-submission input[type="text"] {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #d9cfc2;
+	border-radius: 6px;
+	font-size: 0.95rem;
+	font-family: inherit;
+	outline: none;
+}
+
+.name-submission input[type="text"]:focus {
+	border-color: #b8aba0;
+}
+
+.name-submission button {
+	background: #e6dfd5;
+	color: #6b635b;
+	border: none;
+	padding: 0 15px;
+	border-radius: 6px;
+	font-weight: 700;
+	cursor: pointer;
+	font-family: inherit;
+	white-space: nowrap;
+	transition: background 0.2s;
+}
+
+.name-submission button:hover {
+	background: #d9cfc2;
+	color: #524a43;
+}
+
+.line-stamp-area {
+	text-align: center;
+	width: 100%;
+}
+
+.line-stamp-banner a {
+	display: block;
+	text-decoration: none;
+}
+
+.stamp-bot-note {
+	text-align: center;
+	font-size: 0.85rem;
+	color: #777;
+	margin: 8px 0 0;
+}
+
+/* ==========================================
+   共通パーツ（ノート・ボタン・フッター）
+   ========================================== */
+.note {
+	font-size: 0.85rem;
+	color: #777;
+	line-height: 1.6;
+	margin-top: 40px;
+	/* 上のボタン（ほかの穴をのぞいてみる）との距離を広げる */
+	margin-bottom: 0px;
+	/* 下のフッターとの距離を広げる */
+	text-align: center;
+}
+
+/* brタグを強制的に改行させるブロック要素にする */
+.note br {
+	display: block;
+	content: "";
+	margin-top: 0;
+	/* 余計な隙間をなくす */
+}
+
+/* 「ほかの穴をのぞいてみる」穴風デザイン（パターンB：丸い覗き穴風・色調整版） */
+.back-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 90px;
+	margin: 100px auto 30px;
+	background-color: #8d6e63;
+	color: #fffde7;
+	font-size: 0.95rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+	/* 完全な楕円の穴 */
+	border: 4px solid #ffb74d;
+	box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s, background-color 0.2s;
+}
+
+.back-button:hover {
+	transform: scale(1.08) rotate(-2deg);
+	background-color: #6d4c41;
+	/* ★ホバー時も少しだけ濃くなる程度の優しい茶色へ */
+}
+
+footer {
+	padding-top: 15px;
+	/* ここを小さくする（元が 30px や 40px になっていれば 10px とかにする） */
+	padding-bottom: 30px;
+	text-align: center;
+	font-size: 0.85rem;
+	color: #999;
+}
+
+.footer-links {
+	margin-bottom: 10px;
+}
+
+.footer-links a {
+	color: #666;
+	text-decoration: none;
+}
+
+.footer-links .separator {
+	margin: 0 10px;
+	color: #ccc;
+}
+
+
+
+/* ==========================================
+   スマホ用メディアクエリ（レスポンシブ調整）
+   ========================================== */
+@media (max-width: 600px) {
+
+
+
+	header {
+		padding: 30px 20px 15px;
+	}
+
+	.result-logo {
+		font-size: 30px;
+	}
+
+	.result-page {
+		padding: 15px 20px 30px;
+	}
+
+	.result-label {
+		font-size: 14px;
+	}
+
+	.result-page>h2 {
+		margin: 30px 0;
+		font-size: 22px;
+		padding: 10px 15px;
+	}
+
+	.result-image {
+		width: 75%;
+		max-width: 380px;
+		margin: 10px auto 30px;
+	}
+
+	/* 要約ボックスのインラインブロック解除 */
+	.result-summary .inline-block {
+		display: inline;
+	}
+
+	/* 本文を左寄せにして読みやすくする */
+	.result-text {
+		text-align: left;
+		padding: 0 15px;
+		font-size: 16px;
+		line-height: 1.9;
+	}
+
+	.result-text p {
+		margin-bottom: 22px;
+	}
+
+	.scene {
+		margin: 35px auto;
+		padding: 20px 20px;
+		width: 90%;
+		max-width: 100%;
+	}
+
+	.scene h3 {
+		font-size: 20px;
+	}
+
+	.ending-big {
+		font-size: 20px;
+	}
+
+	.back-button {
+		padding: 11px 24px;
+	}
+
+	/* 名前募集ボックスの縦並び化 */
+	.name-submission {
+		flex-direction: column;
+		text-align: center;
+		gap: 15px;
+	}
+
+	.name-cara-icon {
+		width: 100px;
+		height: 100px;
+	}
+}

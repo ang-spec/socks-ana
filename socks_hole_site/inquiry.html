@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>お問い合わせ｜靴下の穴診断</title>
+
+	<!-- ファビコン（ブラウザのタブに表示されるアイコン） -->
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<!-- スマホで「ホーム画面に追加」された用のアイコン -->
+	<link rel="apple-touch-icon" href="images/favicon.png">
+
+	<meta property="og:site_name" content="靴下の穴診断">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="お問い合わせ｜靴下の穴診断">
+	<meta property="og:description" content="靴下の穴診断へのお問い合わせ・コラボやタイアップのご相談はこちらから。">
+	<meta property="og:image" content="https://ang-spec.github.io/socks-ana/images/top_ill1.png">
+	<meta property="og:url" content="https://ang-spec.github.io/socks-ana/inquiry.html">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://ang-spec.github.io/socks-ana/images/top_ill1.png">
+
+	<link rel="stylesheet" href="https://unpkg.com/sanitize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZWTGR96QV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-JZWTGR96QV');
+	</script>
+</head>
+
+<body class="inquiry-page">
+	<header class="sub-header">
+		<div class="header-inner">
+			<a href="index.html" class="sub-logo">靴下の穴診断</a>
+		</div>
+	</header>
+	<main class="inquiry-container">
+		<h1>お問い合わせ</h1>
+
+		<!-- 企業・メーカー様向け案内枠 -->
+		<div class="business-notice">
+			<strong class="notice-title">【 🏢 企業・メーカー様へ 】</strong>
+			<p class="notice-text">
+				コラボ企画 / タイアップ / スポンサー掲載 / 取材等のご相談も承っております。<br>
+				お気軽にお問い合わせください。
+			</p>
+		</div>
+
+		<form id="contact-form" action="https://formspree.io/f/xqpkvanr" method="post" class="inquiry-form">
+			<div class="form-group">
+				<label for="name">お名前</label>
+				<input type="text" id="name" name="name" required placeholder="例：靴下 太郎">
+			</div>
+
+			<div class="form-group">
+				<label for="email">メールアドレス</label>
+				<input type="email" id="email" name="email" required placeholder="例：example@email.com">
+			</div>
+
+			<div class="form-group">
+				<label for="message">お問い合わせ内容</label>
+				<textarea id="message" name="message" rows="5" required placeholder="ここにメッセージをご入力ください"></textarea>
+			</div>
+
+			<button type="submit" class="submit-btn">送信する</button>
+		</form>
+	</main>
+
+	<footer>
+		<p class="footer-links">
+			<a href="about.html">このサイトについて</a>
+			<span class="separator">|</span>
+			<a href="index.html" class="top-link">トップページへ戻る</a>
+		</p>
+		<p>&copy; 2026 靴下の穴診断 All Rights Reserved.</p>
+	</footer>
+
+	<script src="js/main.js" defer></script>
+</body>
+
+</html>
