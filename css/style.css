@@ -1,6 +1,51 @@
 @charset "UTF-8";
 
 /* ==========================================
+   Reset / Base CSS
+   ========================================== */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* ==========================================
    基本設定
    ========================================== */
 * {
@@ -769,24 +814,18 @@ body.inquiry-page .form-group textarea:focus {
 body.inquiry-page .submit-btn {
 	display: block;
 	width: auto;
-	/* 横幅いっぱいをやめて文字幅＋余白にする */
 	min-width: 160px;
-	/* 小さくなりすぎないように最低限の幅を確保 */
 	max-width: 200px;
-	/* 全体の最大幅をギュッと小さくする */
 	margin: 0 auto;
 	padding: 10px 20px;
-	/* 上下左右の余白をコンパクトにする */
 	background: #e85d75;
 	color: #fff;
 	border: none;
 	border-radius: 50px;
 	font-size: 1rem;
-	/* フォントサイズも少しスッキリさせる */
 	font-weight: 900;
 	cursor: pointer;
 	box-shadow: 0 4px 0 #ad1457;
-	/* ボタンの立体感の影も少し小さくしてバランス調整 */
 	transition: transform 0.1s, box-shadow 0.1s;
 }
 
@@ -799,6 +838,27 @@ body.inquiry-page .submit-btn:hover {
 body.inquiry-page .submit-btn:active {
 	transform: translateY(2px);
 	box-shadow: 0 1px 0 #ad1457;
+}
+
+/* お問い合わせページ：企業様向け案内（枠なし・左寄せ） */
+body.inquiry-page .inquiry-container .business-notice {
+	margin: 20px 0 30px;
+	text-align: left;
+}
+
+body.inquiry-page .inquiry-container .business-notice .notice-title {
+	display: block;
+	color: #f28b30;
+	font-size: 1rem;
+	margin-bottom: 8px;
+}
+
+body.inquiry-page .inquiry-container .business-notice p.notice-text {
+	text-align: left;
+	font-size: 0.9rem;
+	color: #555;
+	margin-bottom: 0;
+	line-height: 1.6;
 }
 
 /* ==========================================
@@ -827,15 +887,102 @@ footer a {
 }
 
 /* ==========================================
-   スマホ対応（メディアクエリ）
+   広告・アフィリエイトエリア
    ========================================== */
-@media screen and (max-width: 768px) {
-	.zukan-grid {
-		grid-template-columns: repeat(6, 1fr);
-	}
+.ad-wrap {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	max-width: 650px;
+	margin: 100px auto 20px;
+	padding: 0 10px;
 }
 
-@media screen and (max-width: 600px) {
+.ad-item {
+	flex: 1;
+	min-width: 0;
+	position: relative;
+}
+
+.ad-label {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #e85d75;
+	color: #fff;
+	font-size: 0.7rem;
+	font-weight: 700;
+	padding: 2px 8px;
+	border-radius: 10px;
+	white-space: nowrap;
+	z-index: 2;
+}
+
+.ad-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	background: #ffffff;
+	border: 1px solid #e0dad0;
+	border-radius: 12px;
+	padding: 20px 10px 12px;
+	text-decoration: none;
+	color: inherit;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ad-box:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ad-icon {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+	margin-bottom: 8px;
+}
+
+.ad-title {
+	font-size: 0.85rem;
+	font-weight: 900;
+	margin: 0 0 6px 0;
+	color: #333;
+	text-align: center;
+}
+
+.ad-text {
+	font-size: 0.75rem;
+	color: #666;
+	margin: 0 0 10px 0;
+	line-height: 1.4;
+	text-align: center;
+}
+
+span.br-sp {
+	display: block;
+}
+
+.ad-btn {
+	background: #ffd45c;
+	color: #333;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 6px 10px;
+	border-radius: 20px;
+	white-space: nowrap;
+	margin-top: auto;
+}
+
+/* ==========================================
+   スマホ対応（メディアクエリ）
+   ========================================== */
+@media screen and (max-width: 850px) {
 	header {
 		padding: 30px 15px 15px;
 		overflow: hidden;
@@ -879,6 +1026,38 @@ footer a {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.zukan-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.ad-wrap {
+		flex-direction: column;
+		align-items: center;
+		gap: 28px;
+		margin-top: 60px;
+		max-width: 320px;
+	}
+
+	.ad-item {
+		width: 100%;
+		max-width: 220px;
+	}
+
+	.ad-box {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		padding: 20px 15px 15px;
+		justify-content: space-around;
+	}
+
+	span.br-sp {
+		display: inline;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	.zukan-grid {
 		grid-template-columns: repeat(6, 1fr);
@@ -888,42 +1067,4 @@ footer a {
 	.character-zukan {
 		padding: 12px 8px;
 	}
-}
-
-/* 広告 */
-.ad-wrap {
-	display: flex;
-	justify-content: center;
-	gap: 15px;
-	margin-top: 120px;
-	margin-bottom: 30px;
-	flex-wrap: wrap;
-}
-
-.ad-item {
-	width: 100%;
-	max-width: 300px;
-}
-
-/* 本物の広告っぽい見た目にする装飾 */
-.ad-label {
-	display: block;
-	font-size: 0.7rem;
-	color: #aaa;
-	margin-bottom: 4px;
-	text-align: left;
-}
-
-.ad-box {
-	width: 100%;
-	height: 250px;
-	/* 実際の標準的な広告の高さ */
-	background: #f4f4f4;
-	border: 1px dashed #ccc;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #999;
-	font-size: 0.85rem;
-	border-radius: 4px;
 }
