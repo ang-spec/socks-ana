@@ -59,7 +59,7 @@ body {
 	background: #fffdf9;
 	color: #333;
 	font-family: "Zen Maru Gothic", sans-serif;
-	word-break: auto-phrase;
+	/* word-break: auto-phrase; */
 	overflow-wrap: break-word;
 }
 
@@ -1078,4 +1078,21 @@ span.br-sp {
 	.character-zukan {
 		padding: 12px 8px;
 	}
+}
+
+/* 1. result-text全体の最大幅と中央の配置を設定 */
+.result-text {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 2. result-text直下にある「pタグ（段落）」だけを左寄せにする */
+.result-text>p {
+	text-align: left;
+}
+
+/* 3. 最後のボックス内は中央寄せをキープ */
+.result-text .ending-box {
+	text-align: center;
 }
