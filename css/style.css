@@ -1043,23 +1043,29 @@ span.br-sp {
 		align-items: center;
 		gap: 28px;
 		margin-top: 60px;
-		max-width: 320px;
+		max-width: 100%;
+		/* 横幅いっぱいに使えるように解放 */
+		padding: 0 20px;
 	}
 
 	.ad-item {
 		width: 100%;
-		max-width: 220px;
+		max-width: 280px;
+		/* 正方形にならず文字が入るよう十分な幅（360px）に広げる */
 	}
 
 	.ad-box {
 		width: 100%;
-		aspect-ratio: 1 / 1;
+		/* aspect-ratio: 1 / 1;  ← ★これを削除（正方形固定を解除） */
+		height: auto;
+		/* ★中身に合わせて縦に自動で伸びるようにする */
 		padding: 20px 15px 15px;
-		justify-content: space-around;
+		justify-content: flex-start;
 	}
 
 	span.br-sp {
-		display: inline;
+		display: block;
+		/* スマホで改行タグを入れた部分を自然に改行させる */
 	}
 }
 
