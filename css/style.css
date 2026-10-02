@@ -888,6 +888,13 @@ footer a {
 	text-decoration: none;
 }
 
+.affiliate-notice {
+	font-size: 0.75rem;
+	color: #888;
+	margin-top: 15px;
+	text-align: center;
+}
+
 
 
 /* ==========================================
