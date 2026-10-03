@@ -513,6 +513,67 @@ main {
 }
 
 /* ==========================================
+   最新4コマプレビューセクション
+   ========================================== */
+.top-comic-section {
+	margin: 40px auto;
+	padding: 16px 20px;
+	background: #fffdf9;
+	border: 3px dashed #ffd700;
+	border-radius: 16px;
+	max-width: 250px;
+	/* 全体のボックス幅を少しスリムに */
+	text-align: center;
+}
+
+.top-comic-title {
+	font-size: 1.1rem;
+	color: #333;
+	margin-bottom: 12px;
+	font-weight: 700;
+}
+
+.top-comic-link {
+	display: block;
+	text-decoration: none;
+	transition: transform 0.2s ease;
+}
+
+.top-comic-link:hover {
+	transform: scale(1.01);
+}
+
+/* ▼ ここで画像の大きさをしっかり制限します ▼ */
+.top-comic-img {
+	width: 100%;
+	max-width: 150px;
+	/* 画像の最大横幅を320pxに制限（スマホでも収まりが良いサイズ感です） */
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	margin: 0 auto 12px auto;
+	/* 左右中央寄せ */
+	display: block;
+	border: 1px solid #eee;
+}
+
+.top-comic-btn {
+	display: inline-block;
+	background: #ff6b6b;
+	color: #fff;
+	font-weight: bold;
+	padding: 8px 16px;
+	border-radius: 30px;
+	font-size: 0.9rem;
+	box-shadow: 0 3px 0 #c93b3b;
+}
+
+.top-comic-btn:hover {
+	background: #ff5252;
+}
+
+
+/* ==========================================
    掲示板（黒板風）
    ========================================== */
 .info-board {

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* --- 4コマ専用ページ固有のスタイル --- */
+
+.sub-header {
+	padding: 20px;
+	text-align: center;
+	background: #fff;
+	border-bottom: 2px solid #eee;
+	position: relative;
+}
+
+.back-link {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #666;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.sub-logo {
+	font-size: 1.3rem;
+	color: #333;
+	margin: 0;
+}
+
+/* --- パターンA：わくわく看板風 --- */
+.sub-header {
+	padding: 25px 20px;
+	text-align: center;
+	background: #fffdf9;
+	border-bottom: none;
+	position: relative;
+}
+
+.sub-logo {
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #333;
+	background: #fff;
+	padding: 10px 24px;
+	border: 3px solid #333;
+	border-radius: 50px;
+	/* 丸っこいカプセル型 */
+	box-shadow: 0 4px 0 #333;
+	/* 影をつけて立体的に */
+	margin: 0;
+	font-weight: 900;
+}
+
+.comic-main {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 30px 16px 60px 16px;
+}
+
+.comic-lead {
+	text-align: center;
+	font-size: 0.95rem;
+	color: #666;
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+/* 4コマカード */
+.comic-list {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+/* 4コマカード全体をきれいに中央揃えにする場合 */
+.comic-card {
+	background: #fff;
+	border: 3px solid #eee;
+	border-radius: 16px;
+	padding: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+	text-align: center;
+	/* ← カードの中身を全体的に中央寄せにする */
+}
+
+/* 上部の「第1話」と日付の行は左右に離すために左寄せ・右寄せを維持する */
+.comic-header-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	font-size: 0.85rem;
+	color: #888;
+	text-align: left;
+	/* ← ここは左・右配置に戻す */
+}
+
+.comic-number {
+	background: #ffd700;
+	color: #333;
+	font-weight: 700;
+	padding: 2px 8px;
+	border-radius: 4px;
+}
+
+.comic-title {
+	font-size: 1.1rem;
+	color: #333;
+	margin-bottom: 14px;
+	font-weight: 700;
+	text-align: center;
+	/* ← タイトルを真ん中に */
+}
+
+.comic-img-wrap {
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.comic-img-wrap img {
+	max-width: 100%;
+	width: 320px;
+	height: auto;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	display: block;
+	/* ← 画像をブロック要素にして中央に安定させる */
+	margin: 0 auto;
+	/* ← 左右の余白を自動にして真ん中に配置 */
+}
+
+/* Xシェアボタン */
+.comic-action {
+	text-align: center;
+}
+
+.x-share-btn {
+	display: inline-block;
+	background: #000;
+	color: #fff;
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 8px 16px;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+
+.x-share-btn:hover {
+	background: #333;
+}
+
+/* 戻るボタンエリア */
+.back-to-top-area {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.home-return-btn {
+	display: inline-block;
+	background: #ff6b6b;
+	color: #fff;
+	font-weight: bold;
+	padding: 12px 24px;
+	border-radius: 30px;
+	text-decoration: none;
+	box-shadow: 0 4px 0 #c93b3b;
+	font-size: 0.95rem;
+}
+
+.home-return-btn:hover {
+	background: #ff5252;
+}
